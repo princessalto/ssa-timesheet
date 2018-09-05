@@ -1,0 +1,90 @@
+html, body {
+	overflow-x: hidden;
+}
+
+html {
+	font-size: $font-size-base;
+}
+
+body {
+	font-size: 100%;
+	font-family: $primary-font-family;
+	@include colors($dark-color, $body-bg);
+}
+
+nav {
+	ul {
+		padding-left: 0;
+		list-style: none;
+	}
+	li.active, li.current-menu-item, li.current_page_item {
+        .nav-link {
+            color: $light-color;
+        }
+    }
+	a {
+		color: $primary-color;
+		&:hover, &:focus, &:active {
+			color: $light-color;
+		}
+	}
+}
+
+textarea {
+	max-width: 100%;
+	resize: vertical;
+	min-height: 250px;
+}
+
+iframe {
+	overflow: hidden !important;
+	border: none;
+	background-color: transparent;
+	max-width: 100%;
+}
+
+article a {
+	color: $secondary-color;
+	&:hover, &:focus, &:active {
+		color: darken($secondary-color, 10%);
+	}
+	&[target="_blank"] {
+		&:after {
+			content: "\f14c";
+			display: inline-block;
+			vertical-align: top;
+			width: 10px;
+			height: 10px;
+			font-family: "FontAwesome", sans-serif;
+			font-size: 0.6rem;
+			margin-top: -10px;
+		}
+	}
+}
+
+::-webkit-input-placeholder {
+	font-style: italic;
+}
+::-moz-input-placeholder {
+	font-style: italic;
+}
+::input-placeholder {
+	font-style: italic;
+}
+
+[data-bg] {
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.error {
+	color: $danger-color;
+}
+
+.row-fluid {
+	position: relative;
+}
+
+.bg-lightgray {
+	background-color: $gray-light;
+}

@@ -1,0 +1,10 @@
+<?php
+
+namespace $module\Models;
+
+use Pluma\Models\Model;
+
+class $model extends Model
+{
+    //
+}

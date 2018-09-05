@@ -1,0 +1,10 @@
+<?php
+namespace $module\Controllers;
+
+use Pluma\Controllers\AdminController as Controller;
+use Illuminate\Http\Request;
+
+class $controller extends Controller
+{
+    $resource
+}

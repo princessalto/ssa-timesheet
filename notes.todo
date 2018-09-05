@@ -1,0 +1,80 @@
+
+Models:
+  php artisan make:model ModuleName
+
+Refresh:
+  composer dump-autoload
+
+Migrate:
+   add table
+      php artisan make:migration create_tablenames_table --table=tablenames
+   migrate to database
+      php artisan migrate --path=modules/ModuleName/database/migrations
+
+Run:
+  php .\artisan serve
+
+Tinker:
+  php artisan tinker
+  $user = new App\User();
+  $user->firstname = "Name"; $user->lastname = "Surname"; $user->email = "email@test.com"; $user->password = Hash::make('admin'); $user->save();
+
+Route:
+  php artisan route:list
+
+  To-do:
+    ✔ Display Picture @done (17-01-27 17:49)
+    ✔ Roles @done (17-01-31 08:40)
+        superadmin-hr
+        admin-team lead, managers
+        employees
+    ✔ Dashboard contents (bar graph - bill & non-bill) @done (17-01-27 17:48)
+    ✔ Blank (weekends, vl, sl) @done (17-01-26 09:56)
+    ✔ Employee menu (add employee) @done (17-01-26 09:56)
+    ✔ Scheduler widgets @done (17-01-27 17:48)
+    ✔ display description on calendar "day" view @done (17-01-26 09:55)
+    ✔ from employee list, year isn't correct @done (17-01-27 12:44)
+    ✔ disable prev time @done (17-01-31 09:42)
+    ✔ Delete Selected Checkbox @done (17-02-02 14:18)
+    ✔ departments @done (17-01-27 12:45)
+    ✔ employee list - account name iniexport @done (17-01-27 17:48)
+
+    ✔ edit view ng index @done (17-01-25 11:30)
+    ✔ add/create btn ng index @done (17-01-25 11:29)
+    ✔ breadcrumb edit @done (17-01-27 17:47)
+    ✔ Sidebar Menu Dropdown if active @done (17-01-31 08:42)
+    ✔ Finalize Scheduler @done (17-02-02 17:06)
+    ✔ Suggested Tags ( Smart Search ) for schedule's description @done (17-02-02 14:56)
+    ☐ Profile (skins, update display picture) - php
+    ☐ Forms Profile - database
+    ✔ Department Filtering (filter on search by dept) @done (17-02-10 09:32)
+    ☐ forgot password (view)
+    ☐ lunchbreak scheduler
+    ☐ caret sidebar
+    ✔ summary view @done (17-02-01 17:29)
+        employee login - hindi nag ddirect sa current month
+        admin - to employee - maling view ng summary pero tama kapag generate
+
+    Dashboard (Datas)
+    Widgets
+      Displaying live data per month (current and rev-next calendar btn)
+      ☐ Total Tasks
+      ☐ Total Billable
+      ☐ Total Non-billable
+      ☐ Total Hours Worked
+
+    Chart
+      ☐ Total Hours of Tasks per Month
+
+    Table
+      ☐ Monthly Breakdown of Tasks
+      ☐ Monthly Breakdown of Hours
+      ☐ Progress
+
+    For future:
+    - Undertime
+    - OT
+    - Holidays
+    - Notes
+
+
